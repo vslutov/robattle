@@ -1,66 +1,37 @@
-# dasbox
+# robattle
 
-## Build for Windows
+- [Gameplay video](https://drive.google.com/file/d/1xJ-LxbOtH7klXuj88Y4PHyl8M09zGv3I/view?usp=sharing)
+- [Download release](https://github.com/vslutov/robattle/releases)
+- Run start.bat
 
-Install Visual Studio 2017 or 2019\
-Install CMake https://cmake.org/install/ \
-`git clone --recurse-submodules https://github.com/imp5imp5/dasbox.git`\
-`cd dasbox`\
-`build_windows_vs_*.bat`
+## Controls
 
+- Left mouse button to select unit
+- Right mouse button to move/attack
 
-## Build for Linux (tested only on Ubuntu 20)
-`sudo apt update`\
-`sudo apt install g++ make`
+## Gameplay
 
-update CMake (3.21.3 or newer version required) https://cmake.org/install/
+Units can move/attack by this pattern:
 
-`sudo apt install libudev-dev libasound2-dev libpulse-dev libx11-dev mesa-common-dev libgl1-mesa-dev libglu1-mesa-dev libxrandr-dev libxcursor-dev libfreetype-dev`\
-\
-`git clone --recurse-submodules https://github.com/imp5imp5/dasbox.git `\
-`cd dasbox`\
-`./build_linux.sh`
+```
+O X X U X X O
+O O O X O O O
+```
 
-## How to use
+Where U - unit
+X - accessable place
+O - not accessable place
 
-Run your application:
+## Credits
 
-  `dasbox.exe <path_to_application_folder/file_name.das>`
+- Code by vslutov
+- Assets from:
+  - [Superpowers](http://superpowers-html5.com/) - [source](https://github.com/sparklinlabs/superpowers-asset-packs)
+  - [Kevin O'Ryan](https://opengameart.org/users/TKZ-Productions) - [source](https://opengameart.org/node/50703)
+  - [AntumDeluge](https://opengameart.org/users/antumdeluge) - [source](https://opengameart.org/content/minimare-rework)
+- Music from [opus magnum](https://archive.org/search.php?query=creator%3A%22opus+magnum%22) - [link](https://archive.org/details/5-relax-9)
 
-Optional comand line arguments:
+## Local build
 
-  `--dasbox-console - duplicate output to console ('--' is also acceptable)` \
-  `--trust - allow access to any file on this computer`
-
-Once the application is running, all the sources ('file_name.das' and all the sources requested from it) will be checked for changes and automatically reloaded. \
-The current directory will change to 'path_to_application_folder'. For security reasons access to parent directories from within the script will be forbidden.
-
-**F5** or **Ctrl+R** - reload sources in the manual mode \
-**Ctrl+F5** or **Ctrl+Alt+R** - hard reload, **ECS** will be reloaded too \
-**Tab** - switch to the logging screen and back
-
-In the log screen your application will be paused.
-
-Controls in the log screen:
-
-  **Up, Down, Ctrl+Up, Ctrl+Down, PgUp, PgDown, Mouse Scroll** - scroll log \
-  **Left Mouse Button** - text selection \
-  **Ctrl+C** - copy to clipboard
-  
-
-## More to read and watch
-
-* See [API][api]
-
-* Watch [videos][]
-
-* See [roadmap][roadmap]
-
-* See [how to setup VS Code][vscodesetup]
-
-
-
-[videos]: https://www.youtube.com/playlist?list=PL6Ke-5R5eg2I7oVLR7TJIT5Q0ikGecVrT
-[api]: https://github.com/imp5imp5/dasbox/blob/main/doc/api.txt
-[vscodesetup]: https://github.com/imp5imp5/dasbox/blob/main/doc/vscode_setup.txt
-[roadmap]: https://github.com/imp5imp5/dasbox/blob/main/doc/roadmap.md
+- Run `build_windows_vs_2019.bat`
+- Run `make_dist.bat`

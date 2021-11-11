@@ -9,43 +9,43 @@ if [%CONFIGURATION%] == [] (
 )
 
 if exist "%programfiles(x86)%\Microsoft Visual Studio\%VS_NUMBER%\Professional" (
-  call   "%programfiles(x86)%\Microsoft Visual Studio\%VS_NUMBER%\Professional\VC\Auxiliary\Build\vcvarsall.bat" x86_x64
+  call   "%programfiles(x86)%\Microsoft Visual Studio\%VS_NUMBER%\Professional\VC\Auxiliary\Build\vcvarsall.bat" x64
   goto on_found
 ) 
 if exist "%programfiles(x86)%\Microsoft Visual Studio\%VS_NUMBER%\Enterprise" (
-  call   "%programfiles(x86)%\Microsoft Visual Studio\%VS_NUMBER%\Enterprise\VC\Auxiliary\Build\vcvarsall.bat" x86_x64
+  call   "%programfiles(x86)%\Microsoft Visual Studio\%VS_NUMBER%\Enterprise\VC\Auxiliary\Build\vcvarsall.bat" x64
   goto on_found
 ) 
 if exist "%programfiles(x86)%\Microsoft Visual Studio\%VS_NUMBER%\Community" (
-  call   "%programfiles(x86)%\Microsoft Visual Studio\%VS_NUMBER%\Community\VC\Auxiliary\Build\vcvarsall.bat" x86_x64
+  call   "%programfiles(x86)%\Microsoft Visual Studio\%VS_NUMBER%\Community\VC\Auxiliary\Build\vcvarsall.bat" x64
   goto on_found
 ) 
 if exist "%programfiles(x86)%\Microsoft Visual Studio\%VS_NUMBER%\WDExpress" (
-  call   "%programfiles(x86)%\Microsoft Visual Studio\%VS_NUMBER%\WDExpress\VC\Auxiliary\Build\vcvarsall.bat" x86_x64
+  call   "%programfiles(x86)%\Microsoft Visual Studio\%VS_NUMBER%\WDExpress\VC\Auxiliary\Build\vcvarsall.bat" x64
   goto on_found
 ) 
 if exist "%programfiles(x86)%\Microsoft Visual Studio\%VS_NUMBER%\BuildTools" (
-  call   "%programfiles(x86)%\Microsoft Visual Studio\%VS_NUMBER%\BuildTools\VC\Auxiliary\Build\vcvarsall.bat" x86_x64
+  call   "%programfiles(x86)%\Microsoft Visual Studio\%VS_NUMBER%\BuildTools\VC\Auxiliary\Build\vcvarsall.bat" x64
   goto on_found
 )
 if exist "%programfiles%\Microsoft Visual Studio\%VS_NUMBER%\Professional" (
-  call   "%programfiles%\Microsoft Visual Studio\%VS_NUMBER%\Professional\VC\Auxiliary\Build\vcvarsall.bat" x86_x64
+  call   "%programfiles%\Microsoft Visual Studio\%VS_NUMBER%\Professional\VC\Auxiliary\Build\vcvarsall.bat" x64
   goto on_found
 ) 
 if exist "%programfiles%\Microsoft Visual Studio\%VS_NUMBER%\Enterprise" (
-  call   "%programfiles%\Microsoft Visual Studio\%VS_NUMBER%\Enterprise\VC\Auxiliary\Build\vcvarsall.bat" x86_x64
+  call   "%programfiles%\Microsoft Visual Studio\%VS_NUMBER%\Enterprise\VC\Auxiliary\Build\vcvarsall.bat" x64
   goto on_found
 ) 
 if exist "%programfiles%\Microsoft Visual Studio\%VS_NUMBER%\Community" (
-  call   "%programfiles%\Microsoft Visual Studio\%VS_NUMBER%\Community\VC\Auxiliary\Build\vcvarsall.bat" x86_x64
+  call   "%programfiles%\Microsoft Visual Studio\%VS_NUMBER%\Community\VC\Auxiliary\Build\vcvarsall.bat" x64
   goto on_found
 ) 
 if exist "%programfiles%\Microsoft Visual Studio\%VS_NUMBER%\WDExpress" (
-  call   "%programfiles%\Microsoft Visual Studio\%VS_NUMBER%\WDExpress\VC\Auxiliary\Build\vcvarsall.bat" x86_x64
+  call   "%programfiles%\Microsoft Visual Studio\%VS_NUMBER%\WDExpress\VC\Auxiliary\Build\vcvarsall.bat" x64
   goto on_found
 ) 
 if exist "%programfiles%\Microsoft Visual Studio\%VS_NUMBER%\BuildTools" (
-  call   "%programfiles%\Microsoft Visual Studio\%VS_NUMBER%\BuildTools\VC\Auxiliary\Build\vcvarsall.bat" x86_x64
+  call   "%programfiles%\Microsoft Visual Studio\%VS_NUMBER%\BuildTools\VC\Auxiliary\Build\vcvarsall.bat" x64
   goto on_found
 ) 
 
