@@ -75,13 +75,23 @@ def handle_row(row: Row)
 
                 lb_handled = true
 
+            if is_mouse_in_box(box) && pos |> can_selected_unit_move()
+                let dt = pos |> selected_unit_move()
+                finish_order(dt)
+                lb_handled = true
+
+            if is_mouse_in_box(box) && pos |> can_selected_unit_attack()
+                let dt = pos |> selected_unit_attack()
+                finish_order(dt)
+                lb_handled = true
+
     if get_mouse_button_down(MB_RIGHT)
         for i in range(length(row.units))
             let pos = [[Position pos=i, level=row.level]]
             let box = pos |> get_unit_box()
 
             if is_mouse_in_box(box) && pos |> can_selected_unit_move()
-                let dt = pos |> move_selected_unit()
+                let dt = pos |> selected_unit_move()
                 finish_order(dt)
 
             if is_mouse_in_box(box) && pos |> can_selected_unit_attack()
