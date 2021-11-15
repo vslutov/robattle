@@ -68,7 +68,10 @@ struct public Position
     pos = -1
 
 struct Scene
-    levels : table<Level; Row> <- {{
+    levels : table<Level; Row>
+
+var public scene <- [[Scene
+    levels <- {{
         Level ground => [[Row level=Level ground, units <- [{auto
             [[Unit() t=UnitType minimare, team=Team left, hp=3]];
             [[Unit() t=UnitType dark_minimare, team=Team left, hp=3]];
@@ -95,7 +98,6 @@ struct Scene
             [[Unit() t=UnitType minimare_robot_01, team=Team right, hp=3]]
         }] ]]
     }}
-
-var public scene <- Scene()
+]]
 
 var public active_player = Team left
